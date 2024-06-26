@@ -20,3 +20,15 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>
 );
+
+/* <-- RESENI UKOLU CISLO 3 --> */
+const hamburger = document.querySelector(".nav-btn")
+
+hamburger.addEventListener("click", async (event) => {
+  const menuElm = document.querySelector(".rollout-nav")
+  menuElm.classList.toggle("nav-closed")
+
+  menuElm.addEventListener("click", async (e) => {
+  menuElm.classList.add("nav-closed")
+  })
+})
