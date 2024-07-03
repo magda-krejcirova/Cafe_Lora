@@ -1,7 +1,6 @@
 import './contact.css'
 
-export const Contact = () => {
-  return (
+export const Contact = () => (
     <section id="contact">
     <div className="container">
     <h2>Kde nás najdete</h2>
@@ -26,4 +25,4 @@ export const Contact = () => {
     </div>
     </div>
     </section>
-  )}
+  )

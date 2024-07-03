@@ -1,7 +1,6 @@
 import './footer.css'
 
-export const Footer = () => {
-  return (
+export const Footer = () => (
     <footer>
     <div className="container">
     <div className="footer__content">
@@ -9,4 +8,4 @@ export const Footer = () => {
     </div>
     </div>
     </footer>
-)}
+)

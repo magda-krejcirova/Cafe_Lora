@@ -1,7 +1,17 @@
-import { Drink } from '../Drink'
+import { Drink } from '../Drink/drink'
 import './menu.css'
 
-export const Menu = () => {
+// const params = new URLSearchParams(window.location.search);
+// const id = params.get('id');
+
+const response = await fetch("http://localhost:4000/api/drinks")
+const json = await response.json()
+const drinks = json.data
+//console.log(drinks)
+
+export const Menu = ({drinks}) => {
+   //const {id, name, ordered, image, layers} = drinks
+   //console.log(drinks.id)
     return (
         <section id="menu" className="menu">
             <div className="container">
@@ -10,24 +20,18 @@ export const Menu = () => {
                     Vyberte si z našeho interaktivního menu a nemusíte čekat na obsluhu
                 </p>
                 <div className="drinks-list">
+                  {drinks.map(drink => (
                     <Drink
-                        id={0}
-                        name="Romano"
-                        ordered={false}
-                        image="http://localhost:4000/assets/cups/romano.png"
-                        layers={[
-                            {
-                                color: '#fbdf5b',
-                                label: 'citrón',
-                            },
-                            {
-                                color: '#613916',
-                                label: 'espresso',
-                            },
-                        ]}
+                        key={drink.id}
+                        id={drink.id}
+                        name={drink.name}
+                        ordered={drink.ordered}
+                        image={drink.image}
+                        layers={drink.layers}                                       
                     />
-
+                  )) }
                 </div>
+            
                 <div className="order-detail">
                     <a href="/order.html">Detail objednávky</a>
                 </div>

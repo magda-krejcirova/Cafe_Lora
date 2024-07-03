@@ -1,7 +1,6 @@
 import './gallery.css'
 
-export const Gallery = () => {
-  return (
+export const Gallery = () => (
     <section id="gallery" className="gallery">
     <div className="container">
     <div className="gallery__content">
@@ -24,7 +23,7 @@ export const Gallery = () => {
     </div>
     </div>
     </section>
-  )}
+  )
 
 
  

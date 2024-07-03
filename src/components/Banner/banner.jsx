@@ -1,7 +1,6 @@
 import './banner.css'
 
-export const Banner = () => {
-  return (
+export const Banner = () => (
     <section className="banner">
         <div className="container">
           <div className="banner__content">
@@ -10,4 +9,4 @@ export const Banner = () => {
           </div>
         </div>
       </section>
-  )}
+  )
