@@ -1,11 +1,7 @@
 import { Layer } from '../Layer/layer'
-import './style.css'
+import './drink.css'
 
-export const Drink = ({id, name, ordered, image, layers}) => {
-  //const {id, name, ordered, image, layers} = drinks
-  //console.log(props)
-  // const {color, label} = layers
-  return (  
+export const Drink = ({id, name, ordered, image, layers}) => (  
     <div className="drink">
       <div className="drink__product">
         <div className="drink__cup">
@@ -25,7 +21,7 @@ export const Drink = ({id, name, ordered, image, layers}) => {
           </button>
         </form>
     </div>
-  )}
+)
 
 
 
