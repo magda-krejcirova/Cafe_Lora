@@ -42,7 +42,7 @@ hamburger.addEventListener("click", async (event) => {
 document.querySelectorAll(".drink__controls").forEach(btn => {
 
   btn.addEventListener("click", async e => {
-    e.preventDefault()
+
     const drinkId = btn.dataset.id
     console.log(drinkId)
 
